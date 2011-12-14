@@ -24,6 +24,7 @@
     int won; // battles won... chance to level up each battle won
 }
 -(Ant*)init;
+-(void)printStats;
 -(void)bite;  // is enemy adjacent?  then bite!
 -(void)sting; // is enemy adjacent?  then sting!
 -(void)forage;  // is food adjacent?  then collect it!

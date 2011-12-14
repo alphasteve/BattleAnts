@@ -16,8 +16,11 @@
     health = 100;
     level = 1;
     senseRange = 2 + arc4random() % 2;
-    printf("%d %d %d %d %d\n", attack, defense, health, level, senseRange);
+    [self printStats];
     return self;
+}
+-(void)printStats {
+    printf("lvl:%d att:%d def:%d hth:%d sns:%d\n", level, attack, defense, health, senseRange);
 }
 -(void)bite {
     printf("doing %d damage.\n", attack);
@@ -33,8 +36,8 @@
     defense += arc4random() % 2;
     health += arc4random() % 10;
     level++;
-    printf("ant reached level %d!\n", level);
-    printf("%d %d %d %d %d\n", attack, defense, health, level, senseRange);
+    [self printStats];
+    
 }
 -(void)move {
     // is enemyNear?  foodNear?  trail near?
